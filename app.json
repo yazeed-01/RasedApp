@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Rased",
+    "slug": "rased",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#111111"
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "Rased needs camera access to detect and measure vehicle speeds.",
+          "enableMicrophonePermission": false
+        }
+      ],
+      [
+        "expo-sqlite"
+      ],
+      [
+        "expo-sharing"
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rased.speedcamera",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Rased uses GPS to tag violation locations.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Rased uses GPS to tag violation locations."
+      }
+    },
+    "android": {
+      "package": "com.rased.speedcamera",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#111111"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
